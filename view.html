@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>View Data</title>
+</head>
+<body>
+
+    <h1>All Students</h1>
+
+    <ul>
+        {% for student in students %}
+            <li>
+                <strong>Name:</strong> {{ student.name }} <br>
+                <strong>Email:</strong> {{ student.email }} <br>
+                <strong>Role:</strong> {{ student.role }} <br>
+                <hr>
+            </li>
+        {% endfor %}
+    </ul>
+
+    <h1>All Courses</h1>
+
+    <ul>
+        {% for course in courses %}
+            <li>
+                {{ course.title }}
+            </li>
+        {% endfor %}
+    </ul>
+
+    <br>
+    <a href="/">Back Home</a>
+
+</body>
+</html>
